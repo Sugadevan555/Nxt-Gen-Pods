@@ -1,0 +1,887 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        @font-face {
+            font-family: 'Poppins';
+            src: url('font/Poppins-Medium.ttf');
+        }
+
+        @font-face {
+            font-family: 'Lemon';
+            src: url('Lemon.ttf');
+        }
+
+        body {
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        header {
+            position: relative;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 5%;
+            background: rgba(255, 255, 255, 0.9);
+            /* width: 100%; */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+            list-style: none;
+           
+            margin-left: 30%;
+        }
+
+        .nav-links a, .dropbtn {
+            text-decoration: none;
+            color: black;
+            padding: 0.5rem 1rem;
+            font-size: clamp(0.8rem, 2vw, 0.9rem);
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: rgba(0, 0, 0, 0.9);
+            width: 150px;
+            top: 100%;
+            left: 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: #fff;
+            padding: 0.75rem 1rem;
+            display: block;
+            font-size: clamp(0.7rem, 1.5vw, 0.8rem);
+        }
+
+        .dropdown-content a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .ac-ln-content {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 0.5rem 0;
+            width: 100%;
+            position: sticky;
+            top: 3rem;
+            z-index: 998;
+            visibility: hidden;
+
+        }
+
+        .ac-ln-content a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0 1.5rem;
+            font-size: clamp(0.8rem, 2vw, 0.9rem);
+        }
+
+        .ac-ln-content a:hover {
+            text-decoration: underline;
+        }
+
+        .sticky {
+            display: flex;
+            position: fixed;
+            top: 0;
+            background: rgba(201, 196, 196, 0.815);
+            z-index: 999;
+            visibility: visible;
+
+        }
+
+        main {
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        .top_section {
+            padding: 2rem ;
+            text-align: center;
+            height: 100vh;
+            position: relative;
+            background-color: #333;
+        }
+
+        .headlines {
+            background-color: rgba(128, 128, 128, 0.308);
+            padding: 0.5rem;
+            /* margin: 1rem 0; */
+            transform: translate(0,-80%);
+            /* width: 100%; */
+        }
+
+        .headlines p {
+            font-size: clamp(0.8rem, 2vw, 0.9rem);
+            color: rgba(0, 0, 0, 0.781);
+        }
+
+        .nxtgen{
+            font-size: clamp(2rem, 10vw, 6rem);
+            font-family: 'Poppins';
+            animation: slideIn 2s ease;
+            margin-top: 10%;
+        
+            /* height: 1vh; */
+
+        }
+
+        .pods {
+            font-size: clamp(2rem, 10vw, 6rem);
+            font-family: 'Poppins';
+            animation: slideIn 2s ease;
+            /* margin-left: 55%; */
+
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-20px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        .maximage {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            margin: 2rem auto;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%);
+          }
+
+        .para {
+            width: 90%;
+            max-width: 600px;
+            margin: 2rem auto;
+            text-align: center;
+            font-family: 'Poppins';
+            font-weight: bold;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            animation: slideup 2s ease 1s;
+        }
+
+        @keyframes slideup {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .radically {
+            padding: 2rem 5%;
+            text-align: center;
+            position: relative;
+        }
+
+        .radically h1 {
+            font-size: clamp(1.5rem, 5vw, 2.5rem);
+            font-family: 'Poppins';
+            margin-bottom: 1rem;
+        }
+
+        .fullset {
+            width: 100%;
+            max-width: 700px;
+            height: auto;
+            margin: 2rem auto;
+            display: block;
+        }
+
+        .shape_circle {
+            width: 0.6rem;
+            height: 0.6rem;
+            border: 1px solid rgba(0, 0, 0, 0.247);
+            border-radius: 50%;
+            background-color: transparent;
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .line1, .line2 {
+            background-color: black;
+            position: absolute;
+            height: 1px;
+        }
+
+        .line1 {
+            width: 6rem;
+            top: 8%;
+            left: 45%;
+            transform: rotate(120deg);
+            animation: line1 1s ease infinite;
+        }
+
+        .line2 {
+            width: 10rem;
+            top: 6%;
+            left: 50%;
+            transform: rotate(180deg);
+            animation: line2 3s linear 4.5s infinite;
+        }
+
+        @keyframes line1 {
+            from { width: 3rem; }
+            to { width: 6rem; }
+        }
+
+        @keyframes line2 {
+            from { width: 0; }
+            to { width: 10rem; }
+        }
+
+        .radically p {
+            width: 90%;
+            max-width: 400px;
+            margin: 2rem auto;
+            font-family: 'Poppins';
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            font-weight: bold;
+            animation: typing 2s ease 5s;
+        }
+
+        .radically .noice, .radically .digital, .radically .status {
+            padding: 0.5rem 1rem;
+            background-color: rgba(128, 128, 128, 0.418);
+            border-radius: 15px;
+            font-size: clamp(0.7rem, 1.5vw, 0.8rem);
+            margin: 0.5rem;
+            cursor: pointer;
+            transition: transform 0.3s;
+            display: inline-block;
+        }
+
+        .radically .noice:hover, .radically .digital:hover, .radically .status:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes typing {
+            from { transform: translateX(-10px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        .blackblue {
+            padding: 2rem 5%;
+            text-align: center;
+            position: relative;
+        }
+
+        .blackblue .perfect {
+            font-size: clamp(1.5rem, 5vw, 2.5rem);
+            font-family: 'Poppins';
+            margin-bottom: 1rem;
+        }
+
+        .white, .blue {
+            width: 90%;
+            max-width: 1000px;
+            margin: 1rem auto;
+            border-radius: 35px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            height: 200px;
+        }
+
+        .white { background-color: #F2F2F2; }
+        .blue { background-color: #4E41A6; }
+
+        .blackblue h1 {
+            font-size: clamp(2rem, 8vw, 4rem);
+            font-family: 'Poppins';
+            margin: 1rem 0;
+        }
+
+        .blackblue img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            margin: 2rem auto;
+            display: block;
+            transition: transform 0.3s;
+        }
+
+        .blackblue img:hover {
+            transform: translateY(-10px);
+        }
+
+        .blackblue p, .blackblue #p2 {
+            width: 90%;
+            max-width: 400px;
+            margin: 1rem auto;
+            font-family: 'Poppins';
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            font-weight: bold;
+        }
+
+        .blackblue .p3 {
+            color: gray;
+            font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+            margin: 1rem auto;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .blackblue h3 {
+            color: white;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            margin: 1rem auto;
+            font-family: 'Poppins';
+        }
+
+        .colorssection {
+            padding: 2rem 5%;
+            text-align: center;
+            position: relative;
+        }
+
+        .colorssection .heading1 {
+            font-size: clamp(1.5rem, 5vw, 2.5rem);
+            font-family: 'Poppins';
+            margin-bottom: 1rem;
+        }
+
+        .colorssection .heading2 {
+            font-size: clamp(2rem, 8vw, 4rem);
+            color: rgba(124, 112, 112, 0.308);
+            font-family: 'Poppins';
+        }
+
+        .colorssection img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            margin: 2rem auto;
+            display: block;
+        }
+
+        .colorssection p {
+            width: 90%;
+            max-width: 400px;
+            margin: 1rem auto;
+            font-family: 'Poppins';
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            color: rgba(0, 0, 0, 0.747);
+        }
+
+        .colorssection ol {
+            list-style-type: none;
+            margin: 1rem auto;
+            font-family: 'Poppins';
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            max-width: 400px;
+            text-align: left;
+        }
+
+        .colorssection ul {
+            list-style-type: none;
+            margin: 1rem auto;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            max-width: 400px;
+            text-align: left;
+        }
+
+        .colorssection .list {
+            padding: 0.5rem 0;
+        }
+
+        .container {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin: 2rem auto;
+            padding: 0.5rem;
+            background-color: rgba(128, 128, 128, 0.404);
+            border-radius: 10px;
+        }
+
+        .container label input[type="radio"] {
+            appearance: none;
+            width: 1.5rem;
+            height: 1.5rem;
+            border: 2px solid gray;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        #pink { background-color: pink; }
+        #white { background-color: white; }
+        #blue { background-color: blue; }
+        #black { background-color: black; }
+
+        #buynow {
+            display: inline-block;
+            color: white;
+            background-color: blue;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            margin: 1rem auto;
+            text-decoration: none;
+        }
+
+        .girl_airpods {
+            background: url('images/girl_airpod_max.jpg') no-repeat center/cover;
+            width: 100%;
+            height: 600px;
+            padding: 2rem 5%;
+            position: relative;
+            text-align: center;
+        }
+
+        .girl_airpods h1 {
+            font-size: clamp(1.5rem, 5vw, 2.5rem);
+            color: #F2F2F2;
+            font-family: 'Poppins';
+            margin-bottom: 1rem;
+        }
+
+        .girl_airpods p {
+            width: 90%;
+            max-width: 400px;
+            margin: 1rem auto;
+            font-family: 'Poppins';
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            color: gray;
+        }
+
+        .girl_airpods img {
+            display: none; /* Hidden as purpose unclear */
+        }
+
+        .girl_airpods .purple {
+            display: none; /* Hidden as purpose unclear */
+        }
+
+        .gallery-wrapper, .gallery-wrapper2 {
+            padding: 2rem 5%;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .gallery-wrapper h2, .gallery-wrapper2 h2 {
+            font-size: clamp(1.5rem, 5vw, 2.5rem);
+            font-family: 'Poppins';
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .item_container.scroll-gallery, .item11_container.scroll-gallery {
+            display: flex;
+            gap: 1rem;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            /* padding: 1rem; */
+            scrollbar-width: none;
+        }
+
+        .item_container.scroll-gallery::-webkit-scrollbar,
+        .item11_container.scroll-gallery::-webkit-scrollbar {
+            display: none;
+        }
+
+        .item, .item1 {
+            flex: 0 0 auto;
+            width: clamp(200px, 80%, 400px);
+            height: auto;
+            background: #333;
+            border-radius: 20px;
+            overflow: hidden;
+            scroll-snap-align: start;
+        }
+
+         .item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .item1 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .explore {
+            padding: 2rem 5%;
+            text-align: center;
+            position: relative;
+        }
+
+        .explore h1 {
+            font-size: clamp(1.5rem, 5vw, 2.5rem);
+            font-family: 'Poppins';
+            margin-bottom: 1rem;
+        }
+
+        .product1, .product2 {
+            width: 100%;
+            max-width: 400px;
+            margin: 1rem auto;
+            padding: 1rem;
+            background-color: rgb(228, 228, 228);
+            border-radius: 15px;
+            transition: transform 0.3s;
+        }
+
+        .product1:hover, .product2:hover {
+            transform: scale(1.01);
+        }
+
+        .product1 img, .product2 img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 15px;
+        }
+
+        .product1 h4, .product2 h4 {
+            font-size: clamp(1rem, 3vw, 1.2rem);
+            font-family: 'Poppins';
+            margin: 1rem 0;
+        }
+
+        .product1 p, .product2 p {
+            font-size: clamp(0.8rem, 2vw, 0.9rem);
+            color: gray;
+            margin: 0.5rem 0;
+        }
+
+        .product1 #rs, .product2 #rs {
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            margin: 0.5rem 0;
+        }
+
+        .product1 a, .product2 a {
+            color: blue;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            text-decoration: none;
+            font-family: 'Poppins';
+        }
+
+        .product1 a:hover, .product2 a:hover {
+            text-decoration: underline;
+        }
+
+        .login-section {
+            padding: 2rem 5%;
+            text-align: center;
+            max-width: 500px;
+            margin: 2rem auto;
+        }
+
+        .login-container {
+            background-color: rgba(245, 245, 245, 0.356);
+            padding: 2rem;
+            border-radius: 25px;
+        }
+
+        #username, #password {
+            width: 100%;
+            max-width: 300px;
+            height: 2.5rem;
+            border-radius: 20px;
+            outline: none;
+            border: none;
+            background-color: rgba(245, 245, 245, 0.356);
+            margin: 0.5rem auto;
+            padding: 0 1rem;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            color: white;
+            display: block;
+        }
+
+        #signin {
+            width: 100%;
+            max-width: 300px;
+            height: 2.5rem;
+            border-radius: 20px;
+            outline: none;
+            border: none;
+            background-color: rgb(247, 185, 203);
+            color: black;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            margin: 0.5rem auto;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #signin:hover {
+            background-color: rgba(231, 91, 178, 0.788);
+        }
+
+        input[type="checkbox"] {
+            width: 1rem;
+            height: 1rem;
+            background-color: pink;
+            margin: 0.5rem;
+        }
+
+        #remembertext, #forgettext {
+            font-size: clamp(0.7rem, 1.5vw, 0.8rem);
+            color: rgb(245, 243, 243);
+            margin: 0.5rem;
+        }
+
+        #forgettext a {
+            color: rgb(245, 243, 243);
+            text-decoration: none;
+        }
+
+        #forgettext a:hover {
+            color: rgba(0, 0, 0, 0.521);
+        }
+
+        .login-section p {
+            font-size: clamp(0.7rem, 1.5vw, 0.8rem);
+            color: rgb(245, 243, 243);
+            margin: 1rem 0;
+        }
+
+        #fb, #google {
+            width: 100%;
+            max-width: 150px;
+            height: 2rem;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            background-color: whitesmoke;
+            color: black;
+            font-size: clamp(0.8rem, 2vw, 0.9rem);
+            margin: 0.5rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #fb:hover {
+            background-color: rgb(24, 119, 242);
+        }
+
+        #google:hover {
+            background-color: rgb(52, 168, 83);
+        }
+
+        footer {
+            width: 100%;
+            padding: 2rem 5%;
+            background-color: #f5f5f7;
+            color: #6e6e73;
+            font-size: clamp(0.8rem, 2vw, 0.9rem);
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-column {
+            width: clamp(150px, 22%, 200px);
+            margin-bottom: 1rem;
+        }
+
+        .footer-column h4 {
+            font-size: clamp(0.9rem, 2.5vw, 1rem);
+            color: #1d1d1f;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column ul li {
+            margin: 0.3rem 0;
+        }
+
+        .footer-column ul li a {
+            color: #6e6e73;
+            text-decoration: none;
+        }
+
+        .footer-column ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            margin-top: 1rem;
+            border-top: 1px solid #d2d2d7;
+            padding-top: 1rem;
+            text-align: center;
+        }
+
+        .dark-mode {
+            background-color: #121212;
+            color: #ffffffb2;
+        }
+
+        .dark-mode nav {
+            background-color: #1e1e1e;
+        }
+
+        .dark-mode a {
+            color: #ffffff96;
+        }
+
+        .dark-mode button {
+            background-color: #333;
+            color: rgba(255, 255, 255, 0.603);
+            border: 1px solid white;
+        }
+
+        #darkModeToggle {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            padding: 0.5rem 0.75rem;
+            background-color: #f0f0f081;
+            border: none;
+            cursor: pointer;
+            font-size: clamp(0.8rem, 2vw, 0.9rem);
+        }
+
+        #darkModeToggle:hover {
+            background-color: #dddddd8e;
+        }
+
+        @media (max-width: 900px) {
+            nav {
+                padding: 0.5rem 3%;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.9);
+                padding: 1rem;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .dropdown-content {
+                position: static;
+                width: 100%;
+                background: none;
+                box-shadow: none;
+            }
+
+            .nxtgen, .pods {
+                font-size: clamp(1.5rem, 8vw, 3rem);
+                text-align: center;
+                position: static;
+                
+            }
+
+            .radically .noice, .radically .digital, .radically .status {
+                margin: 0.5rem auto;
+                display: block;
+            }
+
+            .blackblue .perfect, .blackblue h1 {
+                font-size: clamp(1.2rem, 4vw, 2rem);
+            }
+
+            .colorssection .heading1 {
+                font-size: clamp(1.2rem, 4vw, 2rem);
+            }
+
+            .colorssection .heading2 {
+                font-size: clamp(1.5rem, 6vw, 3rem);
+            }
+
+            .product2 {
+                margin-top: 2rem;
+            }
+
+            .footer-column {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .maximage, .fullset, .blackblue img, .colorssection img {
+                max-width: 90%;
+            }
+
+            .container {
+                flex-wrap: wrap;
+            }
+
+            #buynow {
+                width: 100%;
+                max-width: 200px;
+            }
+
+            .item, .item1 {
+                width: clamp(150px, 90%, 300px);
+            }
+
+            .girl_airpods h1, .girl_airpods p {
+                max-width: 90%;
+            }
+
+            .login-container {
+                padding: 1rem;
+            }
+
+            #username, #password, #signin {
+                max-width: 90%;
+            }
+
+            #fb, #google {
+                max-width: 45%;
+            }
+        }
+  

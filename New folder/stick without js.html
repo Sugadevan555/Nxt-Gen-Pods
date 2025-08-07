@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Navbar in Middle</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Creates space before the navbar appears */
+.spacer {
+    height: 500px; /* Adjust this height to control when navbar appears */
+}
+
+/* Navigation Bar */
+.ac-ln-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    opacity: 0; /* Hidden initially */
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* When the user scrolls past the spacer, navbar becomes visible */
+.spacer + .ac-ln-content {
+    opacity: 1;
+}
+
+/* Navigation Links */
+.ac-ln-content a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 14px;
+}
+
+.ac-ln-content a:hover {
+    text-decoration: underline;
+}
+
+/* Content for scrolling */
+.content {
+    padding: 50px;
+    text-align: center;
+    height: 2000px; /* Just to enable scrolling */
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="spacer"></div> <!-- Adds space before navbar -->
+
+    <div class="ac-ln-content">
+        <a href="#">Store</a>
+        <a href="#">Mac</a>
+        <a href="#">iPad</a>
+        <a href="#">iPhone</a>
+        <a href="#">Watch</a>
+        <a href="#">AirPods</a>
+        <a href="#">TV & Home</a>
+        <a href="#">Entertainment</a>
+        <a href="#">Accessories</a>
+        <a href="#">Support</a>
+    </div>
+
+    <div class="content">
+        <h1>Scroll down to see the sticky navbar</h1>
+        <p>This navigation bar appears **only after scrolling** past a certain point.</p>
+    </div>
+
+</body>
+</html>

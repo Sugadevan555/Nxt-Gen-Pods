@@ -1,0 +1,208 @@
+
+
+body{
+    background-image: url(https://cdn.xingosoftware.com/audioxpress/images/fetch/dpr_1/https%3A%2F%2Faudioxpress.com%2Fassets%2Fupload%2Fimages%2F1%2F20240611104500_Ashdown-EraMusicBrands-TWeb.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: 50%;
+    width: 700px;
+    height: 500px;
+    font-family: reg;
+    
+}
+
+
+.mother{
+    position: relative;
+
+}
+
+@font-face{
+    font-family: reg;
+    src: url(Poppins-Regular.ttf);
+}
+
+/* @font-face{
+    font-family: reg;
+    src: url(fonts/Poppins-Medium.ttf);
+} */
+
+.container{
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 450px;
+    /* border: 1px solid rgba(255, 255, 255, 0.212); */
+    border-radius: 25px;
+    width: 500px;
+    height: 500px;
+    background-color: transparent;
+}
+
+form #username{
+   position: absolute;
+   top: 150px;
+   left: 120px;
+   width: 250px;
+   height: 35px;
+   border-radius: 20px;
+   outline: none;
+   border: none;
+   color: white;
+   background-color: rgba(245, 245, 245, 0.356);
+   font-family: reg;
+
+}
+
+i{
+    position: absolute;
+    top: 210px;
+    left: 330px;
+    width: 250px;
+    height: 35px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    color: rgba(65, 62, 62, 0.356);
+    /* background-color: rgba(245, 245, 245, 0.356); */
+    font-family: reg;
+ 
+ }
+
+form #password{
+    position: absolute;
+    top: 200px;
+    left: 120px;
+    width: 250px;
+    height: 35px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    color: white;
+    background-color: rgba(245, 245, 245, 0.356);
+    font-family: reg;
+
+
+ }
+
+
+ #signin{
+    position: absolute;
+    top: 250px;
+    left: 120px;
+    width: 250px;
+    height: 35px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    background-color: rgb(247, 185, 203);
+    color: black;
+    font-family: reg;
+
+ }
+
+ #signin:hover{
+    background-color: rgba(231, 91, 178, 0.788);
+ }
+
+
+ 
+input[type=checkbox]
+{
+    /* appearance: none; */
+    /* -webkit-appearance: none; */
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background-color: pink;
+    /* color: black; */
+    top: 300px;
+    left: 120px;
+    border: none;
+    outline: none;    
+ }
+
+ #remembertext{
+    position: absolute;
+    top: 300px;
+    left: 140px;
+    color: rgb(245, 243, 243);
+    font-size: 12px;
+    
+ }
+
+
+ #forgettext{
+    position: absolute;
+    top: 300px;
+    left: 270px;
+    color: rgb(245, 243, 243);
+    font-size: 12px;
+    
+ }
+
+ #forgettext a{
+    text-decoration: none;
+    color: rgb(245, 243, 243);
+ }
+
+ #forgettext a:hover{
+    color: rgba(0, 0, 0, 0.521);
+ }
+
+
+
+ p{
+    position: absolute;
+    top: 350px;
+    left: 190px;
+    color: rgb(245, 243, 243);
+    font-size: 12px;
+    
+ }
+
+ #fb{
+    position: absolute;
+    top: 390px;
+    left: 120px;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background-color: whitesmoke;
+    color: black;
+    font-family: reg;
+ }
+
+
+ #fb:hover{
+   background-color: rgb(24, 119, 242);
+   cursor: pointer;
+ }
+
+ 
+ #google{
+    position: absolute;
+    top: 390px;
+    left: 270px;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background-color: whitesmoke;
+    color: black;
+    font-family: reg;
+ }
+
+ #google:hover{
+   background-color: rgb(52, 168, 83);
+
+
+ }
+
+
+
+
+
+ 

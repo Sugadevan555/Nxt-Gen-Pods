@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Navbar (Starts in Middle)</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.content {
+    height: 80vh; /* Push the navbar to the middle */
+    text-align: center;
+    padding: 50px;
+}
+
+.ac-ln-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 0;
+    width: 100%;
+    position: absolute;
+    top: 50vh; /* Start appearing in the middle */
+    left: 0;
+    transition: all 0.3s ease-in-out;
+    opacity: 0; /* Initially hidden */
+    visibility: hidden;
+}
+
+.ac-ln-content a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.ac-ln-content a:hover {
+    text-decoration: underline;
+}
+
+/* Sticky navbar when scrolling past it */
+.sticky {
+    position: fixed;
+    top: 0;
+    background: rgba(201, 196, 196, 0.815);
+    opacity: 1;
+    visibility: visible;
+    z-index: 999;
+}
+
+.more-content {
+    height: 150vh; /* Extra content to enable scrolling */
+    padding: 50px;
+    text-align: center;
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <h1>Scroll down to see the navbar</h1>
+        <p>Keep scrolling, and the navbar will appear in the middle of the page.</p>
+    </div>
+
+    <div class="ac-ln-content" id="navbar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <div class="more-content">
+        <h2>More content below...</h2>
+        <p>Now the navbar sticks at the top.</p>
+    </div>
+
+    <script>
+    
+    document.addEventListener("DOMContentLoaded", function () {
+        const nav = document.getElementById("navbar");
+        const triggerPoint = window.innerHeight / 2; // Middle of the screen
+    
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > triggerPoint) {
+                nav.classList.add("sticky");
+            } else {
+                nav.classList.remove("sticky");
+            }
+        });
+    });
+    </script>
+
+</body>
+</html>

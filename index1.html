@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NxtGen Pods</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- <div class="logo">NxtGen Pods</div> -->
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li class="dropdown">
+                    <a class="dropbtn" href="#store">Store</a>
+                    <div class="dropdown-content">
+                        <a href="#overhead">OverHead Phone</a>
+                    </div>
+                </li>
+                <li><a href="#sale">Sale</a></li>
+                <li><a href="#support">Support</a></li>                                                 
+                <li><a href="#logout">Logout</a></li>
+                <!-- <li><button id="darkModeToggle">Dark Mode</button></li> -->
+            </ul>
+        </nav>
+        <div class="ac-ln-content" id="navbar">
+            <a href="#home">Home</a>
+            <a href="#highlights">Highlights</a>
+            <a href="#buy">Buy Now</a>
+            <a href="#about">About</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="top_section">
+            <div class="headlines">
+                <p>Get up to $50–$170 in credit when you trade in an NextGen Pods (2nd generation) or newer.* <a href="#buy" style="color: blue;">Pre‑order</a></p>
+            </div>
+            <h1 class="nxtgen">NxtGen Pods</h1>
+            <!-- <h1 class="pods">Pods</h1> -->
+            <img src="images/apple1-introduces-airpods-max.png" alt="NxtGen Pods" class="maximage">
+            <div class="para">
+                <p>A perfect balance of exhilarating high-fidelity audio and the effortless magic of NxtGen Pods. The ultimate personal listening experience is here.</p>
+            </div>
+        </section>
+
+        <section id="radically" class="radically">
+            <h1>A Radically Original Composition</h1>
+            <img class="fullset" src="images/1740204422557.png" alt="NxtGen Pods Full Set">
+            <h4 class="noice">Noise Control Button</h4>
+            <h4 class="digital">Digital Crown</h4>
+            <h4 class="status">Status Light</h4>
+            <div class="shape_circle"></div>
+        
+            <p>The over-ear headphone has been completely reimagined. From cushion to canopy, NxtGen Pods Max are designed for uncompromising fit.</p>
+        </section>
+
+        <section id="blackblue" class="blackblue">
+            <h1 class="perfect">Perfect Balance</h1>
+            <!-- <div class="white"></div>
+            <div class="blue"></div> -->
+            <!-- <h1>NxtGen Pods</h1> -->
+            <img src="images/pods side img.png" alt="NxtGen Pods Side">
+            <p>A perfect balance of exhilarating high-fidelity audio and the effortless magic of NxtGen Pods. The ultimate personal listening experience is here.</p>
+            <p id="p2">The beautifully anodized aluminum cups feature a revolutionary mechanism that allows each cup to rotate independently and balance pressure.</p>
+            <p class="p3">NEW DESIGN BY NXTGEN</p>
+            <h3>A radically original composition</h3>
+        </section>
+
+        <section id="styles" class="colorssection">
+            <h1 class="heading1">Choose your <span style="color: blue;">style</span></h1>
+            <!-- <h1 class="heading2">NextGen Pods</h1> -->
+            <img class="colorimg" id="displayImage" src="images/white.png" alt="Selected Image">
+            <p>Truly Wireless Gen Z's Over-Ear Headphone</p>
+            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                <ol>
+                    <li>Model Name:</li>
+                    <li>Colors:</li>
+                    <li>Form Factor:</li>
+                    <li>Connectivity Technology</li>
+                </ol>
+                <ul>
+                    <li class="list">NxtGen Pods</li>
+                    <li class="list">Pink, White, Sky Blue, Black</li>
+                    <li class="list">Over-Ear</li>
+                    <li class="list">Wireless, Wired</li>
+                </ul>
+            </div>
+            <div class="container">
+                <label><input id="pink" type="radio" name="image" value="images/pink.png" onclick="changeImage(this)"></label>
+                <label><input id="black" type="radio" name="image" value="images/black.png" onclick="changeImage(this)"></label>
+                <label><input id="blue" type="radio" name="image" value="images/blue.png" onclick="changeImage(this)"></label>
+                <label><input id="white" type="radio" name="image" value="images/white.png" onclick="changeImage(this)"></label>
+            </div>
+            <a id="buynow" href="#buy">Buy Now</a>
+        </section>
+
+        <section id="sound" class="girl_airpods">
+            <h1>Unheard-of Sound</h1>
+            <p><span style="color: black;">Pro‑level Active Noise Cancellation.</span> With up to 2x more noise cancelled, pro‑level Active Noise Cancellation counters external sound with equal anti‑noise. With control over what you hear — and don’t hear — you can immerse yourself in music and podcasts, or simply stay focused, like never before.</p>
+        </section>
+
+        <section id="highlights" class="gallery-wrapper">
+            <h2>Get the Highlights</h2>
+            <div class="item_container scroll-gallery">
+                <div class="item"><img src="images/scrollbar1.jpg" alt="Highlight 1"></div>
+                <div class="item"><img src="images/scrollbar2.jpg" alt="Highlight 2"></div>
+                <div class="item"><img src="images/scrollbar3.jpg" alt="Highlight 3"></div>
+                <div class="item"><img src="images/scrollbar4.jpg" alt="Highlight 4"></div>
+                <div class="item"><img src="images/scrollbar5.jpg" alt="Highlight 5"></div>
+            </div>
+        </section>
+
+        <section id="closer" class="gallery-wrapper2">
+            <h2>Take a Closer Look</h2>
+            <div class="item11_container scroll-gallery">
+                <div class="item1" style="background-color: #faf9f9;"><img src="images/scrollbar1.1.jpg" alt="Closer 1"></div>
+                <div class="item1"><img src="images/scrollbar1.2.jpg" alt="Closer 2"></div>
+                <div class="item1"><img src="images/scrollbar1.3.jpg" alt="Closer 3"></div>
+                <div class="item1"><img src="images/scrollbar1.4.jpg" alt="Closer 4"></div>
+                <div class="item1"><img src="images/scrollbar1.5.jpg" alt="Closer 5"></div>
+            </div>
+        </section>
+
+        <!-- <section id="login" class="login-section">
+            <div class="login-container">
+                <form>
+                    <input type="text" id="username" name="username" placeholder="Username" required>
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                    <button type="submit" id="signin">Sign In</button>
+                    <label>
+                        <input type="checkbox" id="remember" name="remember">
+                        <span id="remembertext">Remember Me</span>
+                    </label>
+                    <span id="forgettext"><a href="#forgot">Forgot Password?</a></span>
+                    <p>Or sign in with</p>
+                    <button type="button" id="fb">Facebook</button>
+                    <button type="button" id="google">Google</button>
+                </form>
+            </div>
+        </section> -->
+
+        <section id="store" class="explore">
+            <h1>Keep Exploring GenPods</h1>
+            <div class="product1">
+                <img src="images/airpods_black.png" alt="NxtGen Pods">
+                <h4>NxtGen Pods</h4>
+                <p>The ultimate over‑ear listening experience.</p>
+                <span id="rs">₹59900.00*</span>
+                <a href="#buy">Buy &gt;</a>
+            </div>
+            <div class="product2">
+                <img src="images/airpods_pro.png" alt="Nx Airpods">
+                <h4>Nx Airpods</h4>
+                <p>The ultimate over‑ear listening experience.</p>
+                <span id="rs">₹24900.00*</span>
+                <a href="#buy">Buy &gt;</a>
+            </div>
+        </section>
+    </main>
+
+    <footer id="about">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>Shop and Learn</h4>
+                <ul>
+                    <li><a href="#store">Store</a></li>
+                    <li><a href="#store">NxtGen Pods</a></li>
+                    <li><a href="#store">HeadPhone</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#">Customize Design</a></li>
+                    <li><a href="#">24/7 Service</a></li>
+                    <li><a href="#">Premium</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Apple Store</h4>
+                <ul>
+                    <li><a href="#">Find a Store</a></li>
+                    <li><a href="#">Genius Bar</a></li>
+                    <li><a href="#">Today at NxtGen</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>About NxtGen</h4>
+                <ul>
+                    <li><a href="#">Newsroom</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Investors</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            Copyright © 2025 Sugan Inc. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        function changeImage(radio) {
+            document.getElementById('displayImage').src = radio.value;
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const nav = document.getElementById("navbar");
+            const triggerPoint = window.innerHeight / 2;
+
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > triggerPoint) {
+                    nav.classList.add("sticky");
+                } else {
+                    nav.classList.remove("sticky");
+                }
+            });
+
+            const toggleButton = document.getElementById("darkModeToggle");
+            const body = document.body;
+
+            if (localStorage.getItem("theme") === "dark") {
+                body.classList.add("dark-mode");
+                toggleButton.textContent = "Light Mode";
+            }
+
+            toggleButton.addEventListener("click", function () {
+                body.classList.toggle("dark-mode");
+                if (body.classList.contains("dark-mode")) {
+                    localStorage.setItem("theme", "dark");
+                    toggleButton.textContent = "Light Mode";
+                } else {
+                    localStorage.setItem("theme", "light");
+                    toggleButton.textContent = "Dark Mode";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
